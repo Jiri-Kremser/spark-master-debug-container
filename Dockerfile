@@ -1,8 +1,7 @@
 FROM java:8u111-jdk-alpine
 
 RUN mkdir /tmp/spark && \
-    chmod ug+rw /etc/passwd &&\
-    
+    chmod ug+rw /etc/passwd && \    
     apk --update --no-cache add bash && \
     rm -rf /var/cache/apk/* && \
     echo '/tmp/spark/bin/spark-submit --class org.apache.spark.examples.SparkPi --master spark://c:7077 --executor-memory 1G /tmp/spark/bin/examples.jar 10' | tee /test > ~/.bash_history
