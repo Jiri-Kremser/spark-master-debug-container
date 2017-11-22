@@ -1,0 +1,6 @@
+**
+!assembly/
+!bin/
+!examples/
+!conf/
+!/entrypoint.sh
